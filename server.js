@@ -1,13 +1,13 @@
 const express = require('express');
 const cors = require('cors');
-const fetch = require('node-fetch');
+const fetch = require('node-fetch'); // versão 2.6.7
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// 🔥 COLOCA AQUI
+// 🔥 SEUS DADOS
 const PIXEL_ID = '1639841107057853';
 const ACCESS_TOKEN = 'EAASBGFXZB1GwBRXZAx2OB9GUIhT92ZAe9trD8J4FZBADrkofZAQNdicTDbRhbURSoTfdoeOpNun14WQKWKTWj5K5pq8zE5ZAH0ZAZBmuX0SR0tKcODXzKPRYNEkZBDZC6tyNN8ISxVb9v3Yyn3lvoqiN5lBMI66EZCS7VcvdIZCAkiiKZB82LNJPDoCPsOVnjLjfTyDGSnQZDZD';
 
