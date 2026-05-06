@@ -29,9 +29,15 @@ app.post('/capi', async (req, res) => {
                             event_time: Math.floor(Date.now() / 1000),
                             event_id: req.body.event_id,
                             action_source: 'website',
+
+                            // 🔥 AQUI FOI CORRIGIDO
                             user_data: {
-                                client_user_agent: req.headers['user-agent']
+                                client_user_agent: req.headers['user-agent'],
+                                client_ip_address: req.headers['x-forwarded-for'] || req.socket.remoteAddress,
+                                fbp: req.body.fbp || undefined,
+                                fbc: req.body.fbc || undefined
                             },
+
                             custom_data: {
                                 value: Number(req.body.value),
                                 currency: 'BRL'
